@@ -13,6 +13,9 @@
 		9F9E07112677904300E7BA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E070F2677904300E7BA45 /* Main.storyboard */; };
 		9F9E07132677904400E7BA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E07122677904400E7BA45 /* Assets.xcassets */; };
 		9F9E07162677904400E7BA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E07142677904400E7BA45 /* LaunchScreen.storyboard */; };
+		9FC250AD267797A4002AF70C /* AstronomyPictureOfTheDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250AC267797A4002AF70C /* AstronomyPictureOfTheDayViewModel.swift */; };
+		9FC250B126779A12002AF70C /* FetchAstronomyInformationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250B026779A12002AF70C /* FetchAstronomyInformationRequest.swift */; };
+		9FC250B926779FCE002AF70C /* AstronomyInformationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250B826779FCE002AF70C /* AstronomyInformationResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		9F9E07122677904400E7BA45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F9E07152677904400E7BA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F9E07172677904400E7BA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC250AC267797A4002AF70C /* AstronomyPictureOfTheDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureOfTheDayViewModel.swift; sourceTree = "<group>"; };
+		9FC250B026779A12002AF70C /* FetchAstronomyInformationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAstronomyInformationRequest.swift; sourceTree = "<group>"; };
+		9FC250B826779FCE002AF70C /* AstronomyInformationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyInformationResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F7611442677967600516E4D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E070D2677904300E7BA45 /* AstronomyPictureOfTheDayViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9F7611452677967F00516E4D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E070F2677904300E7BA45 /* Main.storyboard */,
+				9F9E07142677904400E7BA45 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9F761146267796AA00516E4D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9FC250AC267797A4002AF70C /* AstronomyPictureOfTheDayViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9F9E06FD2677904300E7BA45 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +87,33 @@
 		9F9E07082677904300E7BA45 /* NASA_APOD */ = {
 			isa = PBXGroup;
 			children = (
+				9FC250B626779E60002AF70C /* Models */,
+				9FC250AF267799ED002AF70C /* Services */,
+				9F761146267796AA00516E4D /* ViewModels */,
+				9F7611452677967F00516E4D /* Storyboards */,
+				9F7611442677967600516E4D /* ViewControllers */,
 				9F9E07092677904300E7BA45 /* AppDelegate.swift */,
 				9F9E070B2677904300E7BA45 /* SceneDelegate.swift */,
-				9F9E070D2677904300E7BA45 /* AstronomyPictureOfTheDayViewController.swift */,
-				9F9E070F2677904300E7BA45 /* Main.storyboard */,
 				9F9E07122677904400E7BA45 /* Assets.xcassets */,
-				9F9E07142677904400E7BA45 /* LaunchScreen.storyboard */,
 				9F9E07172677904400E7BA45 /* Info.plist */,
 			);
 			path = NASA_APOD;
+			sourceTree = "<group>";
+		};
+		9FC250AF267799ED002AF70C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9FC250B026779A12002AF70C /* FetchAstronomyInformationRequest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9FC250B626779E60002AF70C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FC250B826779FCE002AF70C /* AstronomyInformationResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9E070E2677904300E7BA45 /* AstronomyPictureOfTheDayViewController.swift in Sources */,
+				9FC250B126779A12002AF70C /* FetchAstronomyInformationRequest.swift in Sources */,
 				9F9E070A2677904300E7BA45 /* AppDelegate.swift in Sources */,
+				9FC250AD267797A4002AF70C /* AstronomyPictureOfTheDayViewModel.swift in Sources */,
+				9FC250B926779FCE002AF70C /* AstronomyInformationResponse.swift in Sources */,
 				9F9E070C2677904300E7BA45 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
