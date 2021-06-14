@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9F9E070A2677904300E7BA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E07092677904300E7BA45 /* AppDelegate.swift */; };
 		9F9E070C2677904300E7BA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E070B2677904300E7BA45 /* SceneDelegate.swift */; };
-		9F9E070E2677904300E7BA45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E070D2677904300E7BA45 /* ViewController.swift */; };
+		9F9E070E2677904300E7BA45 /* AstronomyPictureOfTheDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E070D2677904300E7BA45 /* AstronomyPictureOfTheDayViewController.swift */; };
 		9F9E07112677904300E7BA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E070F2677904300E7BA45 /* Main.storyboard */; };
 		9F9E07132677904400E7BA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E07122677904400E7BA45 /* Assets.xcassets */; };
 		9F9E07162677904400E7BA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E07142677904400E7BA45 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		9F9E07062677904300E7BA45 /* NASA_APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA_APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9E07092677904300E7BA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9E070B2677904300E7BA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F9E070D2677904300E7BA45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F9E070D2677904300E7BA45 /* AstronomyPictureOfTheDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureOfTheDayViewController.swift; sourceTree = "<group>"; };
 		9F9E07102677904300E7BA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F9E07122677904400E7BA45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F9E07152677904400E7BA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				9F9E07092677904300E7BA45 /* AppDelegate.swift */,
 				9F9E070B2677904300E7BA45 /* SceneDelegate.swift */,
-				9F9E070D2677904300E7BA45 /* ViewController.swift */,
+				9F9E070D2677904300E7BA45 /* AstronomyPictureOfTheDayViewController.swift */,
 				9F9E070F2677904300E7BA45 /* Main.storyboard */,
 				9F9E07122677904400E7BA45 /* Assets.xcassets */,
 				9F9E07142677904400E7BA45 /* LaunchScreen.storyboard */,
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9E070E2677904300E7BA45 /* ViewController.swift in Sources */,
+				9F9E070E2677904300E7BA45 /* AstronomyPictureOfTheDayViewController.swift in Sources */,
 				9F9E070A2677904300E7BA45 /* AppDelegate.swift in Sources */,
 				9F9E070C2677904300E7BA45 /* SceneDelegate.swift in Sources */,
 			);
