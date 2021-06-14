@@ -16,6 +16,7 @@
 		9FC250AD267797A4002AF70C /* AstronomyInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250AC267797A4002AF70C /* AstronomyInformationViewModel.swift */; };
 		9FC250B126779A12002AF70C /* FetchAstronomyInformationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250B026779A12002AF70C /* FetchAstronomyInformationRequest.swift */; };
 		9FC250B926779FCE002AF70C /* AstronomyInformationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250B826779FCE002AF70C /* AstronomyInformationResponse.swift */; };
+		9FE630DF2677B7770009A8B0 /* GETRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE630DE2677B7770009A8B0 /* GETRequestable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9FC250AC267797A4002AF70C /* AstronomyInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyInformationViewModel.swift; sourceTree = "<group>"; };
 		9FC250B026779A12002AF70C /* FetchAstronomyInformationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAstronomyInformationRequest.swift; sourceTree = "<group>"; };
 		9FC250B826779FCE002AF70C /* AstronomyInformationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyInformationResponse.swift; sourceTree = "<group>"; };
+		9FE630DE2677B7770009A8B0 /* GETRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETRequestable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		9FC250AF267799ED002AF70C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9FE630DD2677B7270009A8B0 /* Protocols */,
 				9FC250B026779A12002AF70C /* FetchAstronomyInformationRequest.swift */,
 			);
 			path = Services;
@@ -114,6 +117,14 @@
 				9FC250B826779FCE002AF70C /* AstronomyInformationResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9FE630DD2677B7270009A8B0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9FE630DE2677B7770009A8B0 /* GETRequestable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 				9F9E070E2677904300E7BA45 /* AstronomyInformationViewController.swift in Sources */,
 				9FC250B126779A12002AF70C /* FetchAstronomyInformationRequest.swift in Sources */,
 				9F9E070A2677904300E7BA45 /* AppDelegate.swift in Sources */,
+				9FE630DF2677B7770009A8B0 /* GETRequestable.swift in Sources */,
 				9FC250AD267797A4002AF70C /* AstronomyInformationViewModel.swift in Sources */,
 				9FC250B926779FCE002AF70C /* AstronomyInformationResponse.swift in Sources */,
 				9F9E070C2677904300E7BA45 /* SceneDelegate.swift in Sources */,

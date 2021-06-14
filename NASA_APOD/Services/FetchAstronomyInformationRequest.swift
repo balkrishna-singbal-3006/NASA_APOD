@@ -7,35 +7,20 @@
 
 import Foundation
 
-class FetchAstronomyInformationRequest {
+class FetchAstronomyInformationRequest: GETRequestable {
   
-  private static let ENDPOINT = "https://api.nasa.gov/planetary/apod?api_key=MPWAW9EG61juVkcQUR95pfDi2al7ofe2TrfL38Mk"
+  typealias ResponseType = AstronomyInformationResponse
+
+  var endpoint: String = "https://api.nasa.gov/planetary/apod?api_key=MPWAW9EG61juVkcQUR95pfDi2al7ofe2TrfL38Mk"
   
-  private var request: URLRequest
+  var request: URLRequest
   
+  /**
+   Initializes the service to fetch astronomy information.
+   */
   init() {
-    request = URLRequest(url: URL(string: FetchAstronomyInformationRequest.ENDPOINT)!)
+    request = URLRequest(url: URL(string: endpoint)!)
     request.httpMethod = "GET"
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-  }
-  
-  func execute(completion: @escaping (Result<AstronomyInformationResponse, Error>) -> ()) {
-    
-    let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
-      
-      guard error == nil else {
-        completion(.failure(error!))
-        return
-      }
-      
-      do {
-        let decodedResponse = try JSONDecoder().decode(AstronomyInformationResponse.self, from: data!)
-        completion(.success(decodedResponse))
-      } catch {
-        completion(.failure(error))
-      }
-      
-    }
-    task.resume()
   }
 }
