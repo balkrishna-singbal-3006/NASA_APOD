@@ -1,5 +1,5 @@
 //
-//  AstronomyPictureOfTheDayViewModel.swift
+//  AstronomyInformationViewModel.swift
 //  NASA_APOD
 //
 //  Created by Balkrishna Singbal on 14/06/21.
@@ -7,18 +7,18 @@
 
 import Foundation
 
-protocol AstronomyPictureOfTheDayViewModelDelegate {
+protocol AstronomyInformationViewModelDelegate {
   
-  var viewController: AstronomyPictureOfTheDayViewControllerDelegate? { get set }
+  var viewController: AstronomyInformationViewControllerDelegate? { get set }
   
   func fetchAstronomyInformation()
 }
 
-class AstronomyPictureOfTheDayViewModel: AstronomyPictureOfTheDayViewModelDelegate {
+class AstronomyInformationViewModel: AstronomyInformationViewModelDelegate {
   
-  weak var viewController: AstronomyPictureOfTheDayViewControllerDelegate?
+  weak var viewController: AstronomyInformationViewControllerDelegate?
   
-  init(viewController: AstronomyPictureOfTheDayViewControllerDelegate) {
+  init(viewController: AstronomyInformationViewControllerDelegate) {
     self.viewController = viewController
   }
   

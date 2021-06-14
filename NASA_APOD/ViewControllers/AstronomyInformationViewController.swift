@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AstronomyInformationViewController.swift
 //  NASA_APOD
 //
 //  Created by Balkrishna Singbal on 14/06/21.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol AstronomyPictureOfTheDayViewControllerDelegate: class {
+protocol AstronomyInformationViewControllerDelegate: class {
   
   func updateAstronomyInformationView(title: String,
                                       explaination: String,
                                       image: String)
 }
 
-class AstronomyPictureOfTheDayViewController: UIViewController {
+class AstronomyInformationViewController: UIViewController {
 
   // MARK:- IBOutlets
   @IBOutlet weak var astronomyImageView: UIImageView!
@@ -22,8 +22,8 @@ class AstronomyPictureOfTheDayViewController: UIViewController {
   @IBOutlet weak var explainationLabel: UILabel!
   
   // MARK:- Properties
-  private lazy var viewModel: AstronomyPictureOfTheDayViewModelDelegate =  {
-    let viewModel = AstronomyPictureOfTheDayViewModel(viewController: self)
+  private lazy var viewModel: AstronomyInformationViewModelDelegate =  {
+    let viewModel = AstronomyInformationViewModel(viewController: self)
     return viewModel
   }()
   
@@ -37,8 +37,8 @@ class AstronomyPictureOfTheDayViewController: UIViewController {
   
 }
 
-// MARK:- AstronomyPictureOfTheDayViewControllerDelegate methods
-extension AstronomyPictureOfTheDayViewController: AstronomyPictureOfTheDayViewControllerDelegate {
+// MARK:- AstronomyInformationViewControllerDelegate methods
+extension AstronomyInformationViewController: AstronomyInformationViewControllerDelegate {
   
   func updateAstronomyInformationView(title: String,
                                       explaination: String,
