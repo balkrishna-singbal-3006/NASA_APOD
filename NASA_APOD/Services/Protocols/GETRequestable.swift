@@ -65,6 +65,11 @@ extension GETRequestable {
     task.resume()
   }
   
+  /**
+   Checks if the passed date is same as today
+   - parameter dateString: The date for which the check has to be made.
+  - return
+   */
   private func isCachedDateTodays(dateString: String) -> Bool {
     
     guard let cachedDate = dateString.toDate(format: "E, d MMM yyyy HH:mm:ss Z") else {
@@ -81,18 +86,5 @@ extension GETRequestable {
     } catch {
       completion(.failure(error))
     }
-  }
-}
-
-extension String {
-  
-  func toDate(format: String) -> Date? {
-    let dateformatter = DateFormatter()
-    dateformatter.dateFormat = format
-    
-    guard let cachedDate = dateformatter.date(from: self) else {
-      return nil
-    }
-    return cachedDate
   }
 }

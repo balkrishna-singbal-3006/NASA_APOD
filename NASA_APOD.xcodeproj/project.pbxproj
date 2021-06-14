@@ -13,6 +13,8 @@
 		9F9E07112677904300E7BA45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E070F2677904300E7BA45 /* Main.storyboard */; };
 		9F9E07132677904400E7BA45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E07122677904400E7BA45 /* Assets.xcassets */; };
 		9F9E07162677904400E7BA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E07142677904400E7BA45 /* LaunchScreen.storyboard */; };
+		9FA035D22677DEB20075A490 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA035D12677DEB20075A490 /* String+Extension.swift */; };
+		9FA035D62677DEDE0075A490 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA035D52677DEDE0075A490 /* UIImage+Extension.swift */; };
 		9FC250AD267797A4002AF70C /* AstronomyInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250AC267797A4002AF70C /* AstronomyInformationViewModel.swift */; };
 		9FC250B126779A12002AF70C /* FetchAstronomyInformationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250B026779A12002AF70C /* FetchAstronomyInformationRequest.swift */; };
 		9FC250B926779FCE002AF70C /* AstronomyInformationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250B826779FCE002AF70C /* AstronomyInformationResponse.swift */; };
@@ -28,6 +30,8 @@
 		9F9E07122677904400E7BA45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F9E07152677904400E7BA45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F9E07172677904400E7BA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FA035D12677DEB20075A490 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		9FA035D52677DEDE0075A490 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9FC250AC267797A4002AF70C /* AstronomyInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyInformationViewModel.swift; sourceTree = "<group>"; };
 		9FC250B026779A12002AF70C /* FetchAstronomyInformationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAstronomyInformationRequest.swift; sourceTree = "<group>"; };
 		9FC250B826779FCE002AF70C /* AstronomyInformationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyInformationResponse.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 		9F9E07082677904300E7BA45 /* NASA_APOD */ = {
 			isa = PBXGroup;
 			children = (
+				9FA035D02677DE950075A490 /* Extensions */,
 				9FC250B626779E60002AF70C /* Models */,
 				9FC250AF267799ED002AF70C /* Services */,
 				9F761146267796AA00516E4D /* ViewModels */,
@@ -100,6 +105,15 @@
 				9F9E07172677904400E7BA45 /* Info.plist */,
 			);
 			path = NASA_APOD;
+			sourceTree = "<group>";
+		};
+		9FA035D02677DE950075A490 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9FA035D12677DEB20075A490 /* String+Extension.swift */,
+				9FA035D52677DEDE0075A490 /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9FC250AF267799ED002AF70C /* Services */ = {
@@ -197,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA035D22677DEB20075A490 /* String+Extension.swift in Sources */,
 				9F9E070E2677904300E7BA45 /* AstronomyInformationViewController.swift in Sources */,
 				9FC250B126779A12002AF70C /* FetchAstronomyInformationRequest.swift in Sources */,
+				9FA035D62677DEDE0075A490 /* UIImage+Extension.swift in Sources */,
 				9F9E070A2677904300E7BA45 /* AppDelegate.swift in Sources */,
 				9FE630DF2677B7770009A8B0 /* GETRequestable.swift in Sources */,
 				9FC250AD267797A4002AF70C /* AstronomyInformationViewModel.swift in Sources */,
@@ -352,6 +368,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NASA_APOD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,6 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NASA_APOD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
