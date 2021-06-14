@@ -15,6 +15,8 @@
 		9F9E07162677904400E7BA45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E07142677904400E7BA45 /* LaunchScreen.storyboard */; };
 		9FA035D22677DEB20075A490 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA035D12677DEB20075A490 /* String+Extension.swift */; };
 		9FA035D62677DEDE0075A490 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA035D52677DEDE0075A490 /* UIImage+Extension.swift */; };
+		9FA035D92677E13B0075A490 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA035D82677E13B0075A490 /* Coordinator.swift */; };
+		9FA035DD2677E2450075A490 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA035DC2677E2450075A490 /* Storyboarded.swift */; };
 		9FC250AD267797A4002AF70C /* AstronomyInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250AC267797A4002AF70C /* AstronomyInformationViewModel.swift */; };
 		9FC250B126779A12002AF70C /* FetchAstronomyInformationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250B026779A12002AF70C /* FetchAstronomyInformationRequest.swift */; };
 		9FC250B926779FCE002AF70C /* AstronomyInformationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC250B826779FCE002AF70C /* AstronomyInformationResponse.swift */; };
@@ -32,6 +34,8 @@
 		9F9E07172677904400E7BA45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA035D12677DEB20075A490 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		9FA035D52677DEDE0075A490 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		9FA035D82677E13B0075A490 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9FA035DC2677E2450075A490 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		9FC250AC267797A4002AF70C /* AstronomyInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyInformationViewModel.swift; sourceTree = "<group>"; };
 		9FC250B026779A12002AF70C /* FetchAstronomyInformationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAstronomyInformationRequest.swift; sourceTree = "<group>"; };
 		9FC250B826779FCE002AF70C /* AstronomyInformationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyInformationResponse.swift; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 		9F7611442677967600516E4D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9FA035DB2677E2360075A490 /* Protocols */,
 				9F9E070D2677904300E7BA45 /* AstronomyInformationViewController.swift */,
 			);
 			path = ViewControllers;
@@ -93,6 +98,7 @@
 		9F9E07082677904300E7BA45 /* NASA_APOD */ = {
 			isa = PBXGroup;
 			children = (
+				9FA035E12677E8720075A490 /* Coordinators */,
 				9FA035D02677DE950075A490 /* Extensions */,
 				9FC250B626779E60002AF70C /* Models */,
 				9FC250AF267799ED002AF70C /* Services */,
@@ -114,6 +120,22 @@
 				9FA035D52677DEDE0075A490 /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9FA035DB2677E2360075A490 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9FA035DC2677E2450075A490 /* Storyboarded.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9FA035E12677E8720075A490 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9FA035D82677E13B0075A490 /* Coordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		9FC250AF267799ED002AF70C /* Services */ = {
@@ -213,10 +235,12 @@
 			files = (
 				9FA035D22677DEB20075A490 /* String+Extension.swift in Sources */,
 				9F9E070E2677904300E7BA45 /* AstronomyInformationViewController.swift in Sources */,
+				9FA035D92677E13B0075A490 /* Coordinator.swift in Sources */,
 				9FC250B126779A12002AF70C /* FetchAstronomyInformationRequest.swift in Sources */,
 				9FA035D62677DEDE0075A490 /* UIImage+Extension.swift in Sources */,
 				9F9E070A2677904300E7BA45 /* AppDelegate.swift in Sources */,
 				9FE630DF2677B7770009A8B0 /* GETRequestable.swift in Sources */,
+				9FA035DD2677E2450075A490 /* Storyboarded.swift in Sources */,
 				9FC250AD267797A4002AF70C /* AstronomyInformationViewModel.swift in Sources */,
 				9FC250B926779FCE002AF70C /* AstronomyInformationResponse.swift in Sources */,
 				9F9E070C2677904300E7BA45 /* SceneDelegate.swift in Sources */,

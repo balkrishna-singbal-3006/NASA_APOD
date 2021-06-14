@@ -22,10 +22,7 @@ class AstronomyInformationViewController: UIViewController {
   @IBOutlet weak var explainationLabel: UILabel!
   
   // MARK:- Properties
-  private lazy var viewModel: AstronomyInformationViewModelDelegate =  {
-    let viewModel = AstronomyInformationViewModel(viewController: self)
-    return viewModel
-  }()
+  var viewModel: AstronomyInformationViewModelDelegate!
   
   // MARK:- Lifecycle methods
   override func viewDidLoad() {
@@ -38,7 +35,7 @@ class AstronomyInformationViewController: UIViewController {
 }
 
 // MARK:- AstronomyInformationViewControllerDelegate methods
-extension AstronomyInformationViewController: AstronomyInformationViewControllerDelegate {
+extension AstronomyInformationViewController: AstronomyInformationViewControllerDelegate, Storyboarded {
   
   func updateAstronomyInformationView(title: String,
                                       explaination: String,
