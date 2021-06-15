@@ -30,15 +30,18 @@ class AstronomyInformationViewModel: AstronomyInformationViewModelDelegate {
   
   func fetchAstronomyInformation() {
     
+    self.viewController?.showActivityIndicator()
+    
     let request = FetchAstronomyInformationRequest()
     request.execute(completion: { [weak self] (result) in
       
       guard let strongSelf = self else { return }
-      
+            
       switch result {
       
       case .success(let response):
         DispatchQueue.main.async {
+          strongSelf.viewController?.hideActivityIndicator()
           strongSelf.viewController?.updateAstronomyInformationView(title: response.title,
                                                                     explaination: response.explaination,
                                                                     image: response.url)
@@ -46,6 +49,7 @@ class AstronomyInformationViewModel: AstronomyInformationViewModelDelegate {
         
       case .failure(let error):
         DispatchQueue.main.async {
+          strongSelf.viewController?.hideActivityIndicator()
           strongSelf.coordinator?.showAlert(title: "Error", message: error.localizedDescription, handler: nil)
         }
       }

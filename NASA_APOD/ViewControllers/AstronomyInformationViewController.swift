@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AstronomyInformationViewControllerDelegate: class {
+protocol AstronomyInformationViewControllerDelegate: ActivityIndicatorNotifiable {
   
   func updateAstronomyInformationView(title: String,
                                       explaination: String,
@@ -22,16 +22,18 @@ class AstronomyInformationViewController: UIViewController {
   @IBOutlet weak var explainationLabel: UILabel!
   
   // MARK:- Properties
+  var indicator: UIActivityIndicatorView?
   var viewModel: AstronomyInformationViewModelDelegate!
   
   // MARK:- Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.addActivityIndicator()
+    
     // fetch astronomy information
     viewModel.fetchAstronomyInformation()
   }
-  
 }
 
 // MARK:- AstronomyInformationViewControllerDelegate methods

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F37DCF126785CBA00F0223E /* ActivityIndicatorNotifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F37DCF026785CBA00F0223E /* ActivityIndicatorNotifiable.swift */; };
 		9F9E070A2677904300E7BA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E07092677904300E7BA45 /* AppDelegate.swift */; };
 		9F9E070C2677904300E7BA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E070B2677904300E7BA45 /* SceneDelegate.swift */; };
 		9F9E070E2677904300E7BA45 /* AstronomyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E070D2677904300E7BA45 /* AstronomyInformationViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F37DCF026785CBA00F0223E /* ActivityIndicatorNotifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorNotifiable.swift; sourceTree = "<group>"; };
 		9F9E07062677904300E7BA45 /* NASA_APOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA_APOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9E07092677904300E7BA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9E070B2677904300E7BA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				9FA035DC2677E2450075A490 /* Storyboarded.swift */,
+				9F37DCF026785CBA00F0223E /* ActivityIndicatorNotifiable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FA035D22677DEB20075A490 /* String+Extension.swift in Sources */,
+				9F37DCF126785CBA00F0223E /* ActivityIndicatorNotifiable.swift in Sources */,
 				9F9E070E2677904300E7BA45 /* AstronomyInformationViewController.swift in Sources */,
 				9FA035D92677E13B0075A490 /* Coordinator.swift in Sources */,
 				9FC250B126779A12002AF70C /* FetchAstronomyInformationRequest.swift in Sources */,
