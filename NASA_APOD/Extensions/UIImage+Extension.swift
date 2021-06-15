@@ -10,11 +10,21 @@ import UIKit
 extension UIImageView {
   
   func downloaded(from url: URL) {
+    
     self.contentMode = .scaleAspectFit
+    
+    let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+    activityIndicator.frame = CGRect.init(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+    activityIndicator.startAnimating()
+    if self.image == nil{
+        self.addSubview(activityIndicator)
+    }
+    
     URLSession.shared.dataTask(with: url) { data, response, error in
       
       guard error == nil else {
         DispatchQueue.main.async {
+          activityIndicator.removeFromSuperview()
           self.image = self.getSavedImage(named: "astronomyPictureOfTheDay.png")
         }
         return
@@ -30,6 +40,7 @@ extension UIImageView {
         return }
       
       DispatchQueue.main.async() {
+        activityIndicator.removeFromSuperview()
         self.image = image
         self.saveImage(image: image)
       }
