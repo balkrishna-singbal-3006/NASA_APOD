@@ -22,12 +22,20 @@ class AstronomyInformationViewModel: AstronomyInformationViewModelDelegate {
   
   weak var coordinator: Coordinator?
   
+  /**
+   Initializes the AstronomyInformationViewMode .
+   - parameter viewController: The view controller instance..
+   - parameter coordinator: The coordinator instance.
+   */
   init(viewController: AstronomyInformationViewControllerDelegate,
        coordinator: Coordinator) {
     self.viewController = viewController
     self.coordinator = coordinator
   }
   
+  /**
+   Makes an API call to fetch the astronomy information.
+   */
   func fetchAstronomyInformation() {
     
     self.viewController?.showActivityIndicator()
