@@ -39,6 +39,12 @@ class AstronomyInformationViewController: UIViewController, Storyboarded {
 // MARK:- AstronomyInformationViewControllerDelegate methods
 extension AstronomyInformationViewController: AstronomyInformationViewControllerDelegate  {
   
+  /**
+   Updates the Astronomy Information.
+   - parameter title: The title text.
+   - parameter explaination: The explaination text.
+   - parameter image: The image URL string.
+   */
   func updateAstronomyInformationView(title: String,
                                       explaination: String,
                                       image: String) {
