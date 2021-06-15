@@ -11,6 +11,7 @@ class Coordinator {
   
   let navigationController: UINavigationController
   
+  // MARK:- Initializer
   init(navigationController: UINavigationController) {
     self.navigationController = navigationController
   }
