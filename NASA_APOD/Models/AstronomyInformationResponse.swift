@@ -9,7 +9,7 @@ import Foundation
 
 struct AstronomyInformationResponse: Decodable {
   let date: String
-  let explaination: String
+  let explanation: String
   let hdUrl: String
   let mediaType: String
   let serviceVersion: String
@@ -18,7 +18,7 @@ struct AstronomyInformationResponse: Decodable {
   
   enum CodingKeys: String, CodingKey {
     case date = "date"
-    case explaination = "explanation"
+    case explanation = "explanation"
     case hdUrl = "hdurl"
     case mediaType = "media_type"
     case serviceVersion = "service_version"
@@ -29,7 +29,7 @@ struct AstronomyInformationResponse: Decodable {
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     date = try container.decode(String.self, forKey: .date)
-    explaination = try container.decode(String.self, forKey: .explaination)
+    explanation = try container.decode(String.self, forKey: .explanation)
     hdUrl = try container.decode(String.self, forKey: .hdUrl)
     mediaType = try container.decode(String.self, forKey: .mediaType)
     serviceVersion = try container.decode(String.self, forKey: .serviceVersion)

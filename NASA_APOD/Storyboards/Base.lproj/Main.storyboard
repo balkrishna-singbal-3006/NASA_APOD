@@ -73,7 +73,7 @@
                     </view>
                     <connections>
                         <outlet property="astronomyImageView" destination="Kqy-9E-jQn" id="ccK-GW-7cX"/>
-                        <outlet property="explainationTextView" destination="7cN-OT-KwP" id="ufB-6f-fTI"/>
+                        <outlet property="explanationTextView" destination="7cN-OT-KwP" id="ufB-6f-fTI"/>
                         <outlet property="titleLabel" destination="krh-9g-lxY" id="mza-Oz-EZs"/>
                     </connections>
                 </viewController>

@@ -51,7 +51,7 @@ class AstronomyInformationViewModel: AstronomyInformationViewModelDelegate {
         DispatchQueue.main.async {
           strongSelf.viewController?.hideActivityIndicator()
           strongSelf.viewController?.updateAstronomyInformationView(title: response.title,
-                                                                    explaination: response.explaination,
+                                                                    explanation: response.explanation,
                                                                     image: response.url)
         }
         
