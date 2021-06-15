@@ -11,6 +11,8 @@ protocol AstronomyInformationViewModelDelegate {
   
   var viewController: AstronomyInformationViewControllerDelegate? { get set }
   
+  var coordinator: Coordinator? { get set }
+  
   func fetchAstronomyInformation()
 }
 
@@ -18,8 +20,12 @@ class AstronomyInformationViewModel: AstronomyInformationViewModelDelegate {
   
   weak var viewController: AstronomyInformationViewControllerDelegate?
   
-  init(viewController: AstronomyInformationViewControllerDelegate) {
+  weak var coordinator: Coordinator?
+  
+  init(viewController: AstronomyInformationViewControllerDelegate,
+       coordinator: Coordinator) {
     self.viewController = viewController
+    self.coordinator = coordinator
   }
   
   func fetchAstronomyInformation() {
@@ -38,10 +44,11 @@ class AstronomyInformationViewModel: AstronomyInformationViewModelDelegate {
                                                                     image: response.url)
         }
         
-      case .failure(let error): break
-        // TODO:- show an alert
+      case .failure(let error):
+        DispatchQueue.main.async {
+          strongSelf.coordinator?.showAlert(title: "Error", message: error.localizedDescription, handler: nil)
+        }
       }
-      
     })
   }
 }

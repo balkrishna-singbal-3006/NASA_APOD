@@ -22,7 +22,8 @@ class Coordinator {
     viewController.title = "Astro Information"
     
     // 2. Create View Model
-    let viewModel = AstronomyInformationViewModel(viewController: viewController)
+    let viewModel = AstronomyInformationViewModel(viewController: viewController,
+                                                  coordinator: self)
     viewModel.viewController = viewController
     
     // 3. Assign View Model and Push View Controller
@@ -32,5 +33,13 @@ class Coordinator {
   
   func popBack() {
       self.navigationController.popViewController(animated: true)
+  }
+  
+  func showAlert(title: String, message: String, handler: (() -> Void)?) {
+      let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+      alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (action) in
+          handler?()
+      }))
+      self.navigationController.present(alertController, animated: true, completion: nil)
   }
 }
