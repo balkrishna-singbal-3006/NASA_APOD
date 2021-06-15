@@ -43,37 +43,39 @@
                                     <constraint firstAttribute="height" constant="1" id="Gb9-Wh-J8L"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMs-u8-5jc">
-                                <rect key="frame" x="20" y="506" width="374" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-OT-KwP">
+                                <rect key="frame" x="20" y="506" width="374" height="336"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OMs-u8-5jc" secondAttribute="trailing" constant="20" id="0Sx-8z-QOy"/>
                             <constraint firstItem="krh-9g-lxY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ask-1u-dyJ"/>
                             <constraint firstItem="krh-9g-lxY" firstAttribute="top" secondItem="Vb1-sW-d6c" secondAttribute="bottom" constant="20" id="Ewd-mU-A6U"/>
                             <constraint firstItem="Kqy-9E-jQn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fo1-29-VfR"/>
                             <constraint firstItem="L5H-ld-PWQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Nhs-7Y-VCK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7cN-OT-KwP" secondAttribute="trailing" constant="20" id="Nja-Yu-o0i"/>
                             <constraint firstItem="Vb1-sW-d6c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OOg-Mr-AHR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7cN-OT-KwP" secondAttribute="bottom" constant="20" id="SHK-9L-GYa"/>
+                            <constraint firstItem="7cN-OT-KwP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XJg-wt-4uN"/>
                             <constraint firstItem="L5H-ld-PWQ" firstAttribute="top" secondItem="krh-9g-lxY" secondAttribute="bottom" constant="20" id="Xfw-R5-Rlj"/>
-                            <constraint firstItem="OMs-u8-5jc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fAY-T2-2GZ"/>
                             <constraint firstItem="krh-9g-lxY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fTK-KL-srb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OMs-u8-5jc" secondAttribute="bottom" constant="20" id="h4K-6N-fBc"/>
                             <constraint firstAttribute="trailing" secondItem="L5H-ld-PWQ" secondAttribute="trailing" constant="20" id="kH5-dX-SvK"/>
                             <constraint firstItem="Kqy-9E-jQn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="l5L-Qu-0Zz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="krh-9g-lxY" secondAttribute="trailing" constant="20" id="phy-l6-uog"/>
-                            <constraint firstItem="OMs-u8-5jc" firstAttribute="top" secondItem="L5H-ld-PWQ" secondAttribute="bottom" constant="20" id="ryD-FT-Z7Y"/>
                             <constraint firstItem="Vb1-sW-d6c" firstAttribute="top" secondItem="Kqy-9E-jQn" secondAttribute="bottom" constant="50" id="vho-Mq-yBj"/>
+                            <constraint firstItem="7cN-OT-KwP" firstAttribute="top" secondItem="L5H-ld-PWQ" secondAttribute="bottom" constant="20" id="wPe-cu-wkR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vb1-sW-d6c" secondAttribute="trailing" constant="20" id="yRP-Zg-IS2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="astronomyImageView" destination="Kqy-9E-jQn" id="ccK-GW-7cX"/>
-                        <outlet property="explainationLabel" destination="OMs-u8-5jc" id="Gp1-jx-WrQ"/>
+                        <outlet property="explainationTextView" destination="7cN-OT-KwP" id="ufB-6f-fTI"/>
                         <outlet property="titleLabel" destination="krh-9g-lxY" id="mza-Oz-EZs"/>
                     </connections>
                 </viewController>
@@ -83,6 +85,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -19,7 +19,7 @@ class AstronomyInformationViewController: UIViewController, Storyboarded {
   // MARK:- IBOutlets
   @IBOutlet weak var astronomyImageView: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var explainationLabel: UILabel!
+  @IBOutlet weak var explainationTextView: UITextView!
   
   // MARK:- Properties
   var indicator: UIActivityIndicatorView?
@@ -44,7 +44,7 @@ extension AstronomyInformationViewController: AstronomyInformationViewController
                                       image: String) {
     
     self.titleLabel.text = title
-    self.explainationLabel.text = explaination
+    self.explainationTextView.text = explaination
     self.astronomyImageView.downloaded(from: URL(string: image)!)
       
   }
