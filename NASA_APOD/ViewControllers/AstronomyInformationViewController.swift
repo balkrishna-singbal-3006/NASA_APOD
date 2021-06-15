@@ -14,7 +14,7 @@ protocol AstronomyInformationViewControllerDelegate: ActivityIndicatorNotifiable
                                       image: String)
 }
 
-class AstronomyInformationViewController: UIViewController {
+class AstronomyInformationViewController: UIViewController, Storyboarded {
 
   // MARK:- IBOutlets
   @IBOutlet weak var astronomyImageView: UIImageView!
@@ -37,7 +37,7 @@ class AstronomyInformationViewController: UIViewController {
 }
 
 // MARK:- AstronomyInformationViewControllerDelegate methods
-extension AstronomyInformationViewController: AstronomyInformationViewControllerDelegate, Storyboarded {
+extension AstronomyInformationViewController: AstronomyInformationViewControllerDelegate  {
   
   func updateAstronomyInformationView(title: String,
                                       explaination: String,
