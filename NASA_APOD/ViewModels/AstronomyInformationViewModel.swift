@@ -50,7 +50,15 @@ class AstronomyInformationViewModel: AstronomyInformationViewModelDelegate {
       case .failure(let error):
         DispatchQueue.main.async {
           strongSelf.viewController?.hideActivityIndicator()
-          strongSelf.coordinator?.showAlert(title: "Error", message: error.localizedDescription, handler: nil)
+          
+          if error.isNotConnectedToInternetError {
+            strongSelf.coordinator?.showAlert(title: "Error",
+                                              message: "We are not connected to the internet, showing you the last image we have.",
+                                              handler: nil)
+          }
+          else {
+            strongSelf.coordinator?.showAlert(title: "Error", message: error.localizedDescription, handler: nil)
+          }
         }
       }
     })
