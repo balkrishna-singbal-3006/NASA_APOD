@@ -9,9 +9,9 @@ import UIKit
 
 protocol AstronomyInformationViewControllerDelegate: ActivityIndicatorNotifiable {
   
-  func updateAstronomyInformationView(title: String,
-                                      explanation: String,
-                                      image: String)
+  func updateAstronomyInformationView(title: String?,
+                                      explanation: String?,
+                                      imageUrl: URL?)
 }
 
 class AstronomyInformationViewController: UIViewController, Storyboarded {
@@ -45,13 +45,15 @@ extension AstronomyInformationViewController: AstronomyInformationViewController
    - parameter explanation: The explanation text.
    - parameter image: The image URL string.
    */
-  func updateAstronomyInformationView(title: String,
-                                      explanation: String,
-                                      image: String) {
+  func updateAstronomyInformationView(title: String?,
+                                      explanation: String?,
+                                      imageUrl: URL?) {
     
     self.titleLabel.text = title
     self.explanationTextView.text = explanation
-    self.astronomyImageView.downloaded(from: URL(string: image)!)
-      
+    
+    guard let url = imageUrl else { return }
+
+    self.astronomyImageView.download(from: url)
   }
 }

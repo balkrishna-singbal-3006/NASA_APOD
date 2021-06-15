@@ -50,9 +50,12 @@ class AstronomyInformationViewModel: AstronomyInformationViewModelDelegate {
       case .success(let response):
         DispatchQueue.main.async {
           strongSelf.viewController?.hideActivityIndicator()
+        
+          let imageURL: URL? = (response.url != nil) ? URL(string: response.url!) : nil
+          
           strongSelf.viewController?.updateAstronomyInformationView(title: response.title,
                                                                     explanation: response.explanation,
-                                                                    image: response.url)
+                                                                    imageUrl: imageURL)
         }
         
       case .failure(let error):

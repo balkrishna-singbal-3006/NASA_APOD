@@ -8,13 +8,13 @@
 import Foundation
 
 struct AstronomyInformationResponse: Decodable {
-  let date: String
-  let explanation: String
-  let hdUrl: String
-  let mediaType: String
-  let serviceVersion: String
-  let title: String
-  let url: String
+  let date: String?
+  let explanation: String?
+  let hdUrl: String?
+  let mediaType: String?
+  let serviceVersion: String?
+  let title: String?
+  let url: String?
   
   enum CodingKeys: String, CodingKey {
     case date = "date"

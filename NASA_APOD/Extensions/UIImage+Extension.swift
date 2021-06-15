@@ -9,7 +9,7 @@ import UIKit
 
 extension UIImageView {
   
-  func downloaded(from url: URL) {
+  func download(from url: URL) {
     
     self.contentMode = .scaleAspectFit
     
@@ -17,7 +17,7 @@ extension UIImageView {
     activityIndicator.frame = CGRect.init(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
     activityIndicator.startAnimating()
     if self.image == nil{
-        self.addSubview(activityIndicator)
+      self.addSubview(activityIndicator)
     }
     
     URLSession.shared.dataTask(with: url) { data, response, error in
@@ -36,8 +36,12 @@ extension UIImageView {
         let data = data,
         let image = UIImage(data: data)
       else {
-        print("Returning from guard...")
-        return }
+        DispatchQueue.main.async {
+          activityIndicator.removeFromSuperview()
+          self.image = self.getSavedImage(named: "astronomyPictureOfTheDay.png")
+        }
+        return
+      }
       
       DispatchQueue.main.async() {
         activityIndicator.removeFromSuperview()
