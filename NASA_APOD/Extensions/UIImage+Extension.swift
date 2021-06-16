@@ -46,8 +46,8 @@ extension UIImageView {
       DispatchQueue.main.async() {
         activityIndicator.removeFromSuperview()
         self.image = image
-        self.saveImage(image: image)
       }
+      self.saveImage(image: image)
     }.resume()
   }
   
